@@ -1,0 +1,39 @@
+--Create a Dessert Shop
+
+CREATE TABLE sweet_desserts (id INTEGER PRIMARY KEY, product TEXT, temp TEXT, lifespan INTEGER, price INTEGER);
+
+
+
+INSERT INTO sweet_desserts VALUES (1, "Apple Pie", "HOT", 5, 10.00);
+INSERT INTO sweet_desserts VALUES (2, "Cherry Pie", "HOT", 5, 10.00);
+INSERT INTO sweet_desserts VALUES (3, "Banana Cream Pie", "COLD", 7, 5.00);
+INSERT INTO sweet_desserts VALUES (4, "Banana Pudding", "COLD", 7, 5.00);
+INSERT INTO sweet_desserts VALUES (5, "Vanilla Cake", "ROOM", 3, 7.50);
+INSERT INTO sweet_desserts VALUES (6, "Chocolate Cake", "ROOM", 3, 7.50);
+INSERT INTO sweet_desserts VALUES (7, "Strawberry Cake", "ROOM", 3, 7.50);
+INSERT INTO sweet_desserts VALUES (8, "Cookies","ROOM", 5, 2.50);
+INSERT INTO sweet_desserts VALUES (9, "Vanilla Ice Cream", "FREEZE", 14, 5.00);
+INSERT INTO sweet_desserts VALUES (10, "Chocolate Ice Cream", "FREEZE", 14, 5.00);
+INSERT INTO sweet_desserts VALUES (11, "Strawberry Ice Cream", "FREEZE", 14, 5.00);
+INSERT INTO sweet_desserts VALUES (12, "Bluberry Muffins", "ROOM", 3, 3.00);
+INSERT INTO sweet_desserts VALUES (13, "Chocolate Chip Muffins", "ROOM", 3, 3.00);
+INSERT INTO sweet_desserts VALUES (14, "Banana Nut Muffins", "ROOM", 3, 3.00);
+INSERT INTO sweet_desserts VALUES (15, "Cheesecake", "COLD", 3, 7.50);
+SELECT * FROM sweet_desserts ORDER BY price;
+SELECT AVG(price) FROM sweet_desserts;
+SELECT AVG(lifespan) FROM sweet_desserts;
+
+
+--display the database ordered by price
+SELECT * FROM sweet_desserts
+ORDER BY price
+
+--display the average lifespan of products
+SELECT AVG(lifespan)
+FROM sweet_desserts
+
+--display average price of products
+SELECT AVG(price)
+FROM sweet_desserts
+
+
