@@ -55,3 +55,23 @@ VALUES
     ('Company II', 'Telecommunications', 110.5, 2000, 1, 21, 12, 4.9),
     ('Company JJ', 'Manufacturing', 370.0, 3100, 1, 20, 12, 7.6),
     ('Company KK', 'Healthcare', 150.2, 3400, 0, 16, 8, 5.3);
+
+
+
+
+
+SELECT company_name,employees, paid_time_off_days AS pto
+,maternity_leave_weeks AS parental_leave
+,ROUND(avg_employee_tenure*1) AS avg_tenure
+FROM fortune_companies
+WHERE pto>=15
+GROUP BY company_name
+ORDER BY pto desc;
+
+SELECT company_name AS employer, employees, paid_time_off_days AS pto,  
+ROUND(avg_employee_tenure*1) AS avg_tenure
+FROM fortune_companies
+GROUP BY employer
+HAVING employees<10000
+AND pto>20
+ORDER BY avg_employee_tenure desc;
